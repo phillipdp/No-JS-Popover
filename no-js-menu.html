@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>No-JS hamburger menu using the popover API</title>
+	<style type="text/css">
+		html {font-size: 16px;}
+		html, body {min-height: 100%;}
+		body {position: relative; background-color: lightblue;}
+	
+		button#openpo {position: absolute; top: 1rem; right: 1rem;}
+		#menu {margin: 0 0 0 auto; box-sizing: border-box; border: 0 none; padding: 2rem; box-shadow: -2px 0px 5px #000; position: relative; width: 0; max-width: 25vw; height: 100vh; transition: width .5s ease-out;}
+		#menu:popover-open {width: 100%;}
+	</style>
+</head>
+
+<body>
+<button id="openpo" popovertarget="menu" popovertargetaction="toggle">hamboiger</button>
+<div popover role="menu" id="menu">
+	<button id="closepo" popovertarget="menu" popovertargetaction="hide">&times;</button>
+	Popover menu
+</div>
+</body>
+</html>
